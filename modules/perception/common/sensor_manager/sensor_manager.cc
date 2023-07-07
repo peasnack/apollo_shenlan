@@ -201,8 +201,8 @@ bool SensorManager::IsCamera(const std::string& name) const {
 }
 
 bool SensorManager::IsCamera(const SensorType& type) const {
-  return type == SensorType::MONOCULAR_CAMERA ||
-         type == SensorType::STEREO_CAMERA;
+  return type == SensorType::MONOCULAR_CAMERA ||  // 单目相机
+         type == SensorType::STEREO_CAMERA;       // 立体相机
 }
 
 bool SensorManager::IsUltrasonic(const std::string& name) const {

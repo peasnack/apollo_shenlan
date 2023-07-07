@@ -105,6 +105,7 @@ size_t Track::GenerateNewTrackId() {
   return ret_track_id;
 }
 
+// 更新传感器目标信息，若存在，更新目标信息；若不存在，新建目标信息
 void Track::UpdateSensorObject(SensorId2ObjectMap* objects,
                                const SensorObjectPtr& obj) {
   std::string sensor_id = obj->GetSensorId();

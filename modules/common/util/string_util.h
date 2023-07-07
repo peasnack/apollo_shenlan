@@ -26,6 +26,7 @@
 #include "absl/strings/str_format.h"
 #include "modules/common/util/future.h"
 
+// std::setprecision(int n)) 和std::fixed结合起来用：保留小数点后n位数
 #define FORMAT_TIMESTAMP(timestamp) \
   std::fixed << std::setprecision(9) << timestamp
 

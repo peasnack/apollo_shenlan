@@ -39,7 +39,7 @@ struct SensorFrameHeader {
                     const Eigen::Affine3d& pose)
       : sensor_info(info), timestamp(ts), sensor2world_pose(pose) {}
 
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW // C++ 内存对齐
 } EIGEN_ALIGN16;
 
 class SensorFrame {

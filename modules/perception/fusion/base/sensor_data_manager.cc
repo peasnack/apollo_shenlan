@@ -52,7 +52,7 @@ void SensorDataManager::AddSensorMeasurements(
       AERROR << "Failed to find sensor " << sensor_id << " in sensor manager.";
       return;
     }
-    sensor_ptr.reset(new Sensor(sensor_info));
+    sensor_ptr.reset(new Sensor(sensor_info));  // 智能指针p中存放指针q，即p指向q的空间，而且会释放原来的空间
     sensors_.emplace(sensor_id, sensor_ptr);
   } else {
     sensor_ptr = it->second;
